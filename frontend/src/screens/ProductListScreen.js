@@ -4,8 +4,8 @@ import {LinkContainer} from "react-router-bootstrap"
 import Loading from "../components/loading/loading";
 import Message from "../components/Message";
 import {Row, Button, Col, Table} from "react-bootstrap";
-import {createProduct, deleteProduct, listProducts} from "../store/actions/productsList";
-import {PRODUCT_CREATE_RESET} from "../store/actions/typesActions";
+import {createProduct, deleteProduct, listProducts} from "../store/actions/products";
+import {PRODUCT_CREATE_RESET} from "../store/actions/types/productsTypes";
 import Paginate from "../components/Paginate";
 
 const ProductListScreen = ({history, match}) => {

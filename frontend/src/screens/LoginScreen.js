@@ -5,7 +5,7 @@ import Loading from "../components/loading/loading";
 import Message from "../components/Message";
 import {Button, Col, Form, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import {login} from "../store/actions/userAuth";
+import {login} from "../store/actions/users";
 
 
 const LoginScreen = ({history, location}) => {

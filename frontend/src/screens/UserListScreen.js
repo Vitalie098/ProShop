@@ -1,7 +1,7 @@
 import React, {useEffect} from "react"
 import {useDispatch, useSelector} from "react-redux";
 import {LinkContainer} from "react-router-bootstrap"
-import {deleteUser, getUsersList} from "../store/actions/userUpdate";
+import {deleteUser, getUsersList} from "../store/actions/users";
 import Loading from "../components/loading/loading";
 import Message from "../components/Message";
 import {Button, Table} from "react-bootstrap";

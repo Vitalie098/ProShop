@@ -7,7 +7,7 @@ import {deliverOrder, getOrderDetails, payOrder} from "../store/actions/orders";
 import Loading from "../components/loading/loading";
 import {PayPalButton} from "react-paypal-button-v2"
 import axios from "axios"
-import {ORDER_DELIVER_RESET, ORDER_PAY_RESET} from "../store/actions/typesActions";
+import {ORDER_DELIVER_RESET, ORDER_PAY_RESET} from "../store/actions/types/ordersTypes";
 
 const OrderScreen = ({history, match}) => {
     const orderId = match.params.id

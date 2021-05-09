@@ -5,9 +5,8 @@ import Message from "../components/Message";
 import Loading from "../components/loading/loading";
 import {Button, Form, FormGroup} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import {USER_UPDATE_RESET} from "../store/actions/typesActions";
-import {getUserDetails} from "../store/actions/userDetails";
-import {updateUser} from "../store/actions/userUpdate";
+import {USER_UPDATE_RESET} from "../store/actions/types/userTypes";
+import {getUserDetails, updateUser} from "../store/actions/users";
 
 const UserEditScreen = ({history, match}) => {
     const userId = match.params.id

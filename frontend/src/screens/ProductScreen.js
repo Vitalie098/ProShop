@@ -4,10 +4,10 @@ import Rating from "../components/Rating";
 import {Row, Col, Image, ListGroup, Form, Button, Card, FormGroup, FormLabel, FormControl} from "react-bootstrap";
 import {useDispatch, useSelector} from "react-redux"
 import Loading from "../components/loading/loading";
-import {listProductDetails} from "../store/actions/productDetails"
+import {listProductDetails} from "../store/actions/products"
 import Message from "../components/Message";
-import {PRODUCT_CREATE_REVIEW_RESET} from "../store/actions/typesActions";
-import {createReviews} from "../store/actions/productsList";
+import {PRODUCT_CREATE_REVIEW_RESET} from "../store/actions/types/productsTypes";
+import {createReviews} from "../store/actions/products";
 import Meta from "../components/Meta";
 
 const ProductScreen = ({history, match}) => {
@@ -31,7 +31,7 @@ const ProductScreen = ({history, match}) => {
             setRating(0)
             setComment("")
         }
-        if(!product._id || product._id !== match.params.id) {
+        if(!product._id || product._id !== match.params.id || successProductReview) {
             dispatch(listProductDetails(match.params.id))
             dispatch({type: PRODUCT_CREATE_REVIEW_RESET})
         }

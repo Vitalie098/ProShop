@@ -2,35 +2,40 @@ import {combineReducers} from "redux"
 import {
         ProductCreateReducers,
         ProductDeleteReducers,
-        ProductListReducers, ProductReviewsCreateReducer, ProductsTopReducer,
-        ProductUpdateReducers
-} from "./ProductsListReducers";
-import {ProductDetailsReducer} from "./ProductDetailsReducer";
-import {CartReducer} from "./CartReducer";
-import {UserLoginReducer} from "./UserLoginReducer";
-import {UserRegisterReducer} from "./UserRegisterReducer";
-import {UserDetailsReducer} from "./UserDetailsReducer";
+        ProductListReducers,
+        ProductReviewsCreateReducer,
+        ProductsTopReducer,
+        ProductUpdateReducers,
+        ProductReducers
+
+} from "./ProductReducers";
+import {CartReducers} from "./CartReducers";
 import {
-        userDeleteReducer,
-        userListReducer,
+        UserReducers,
         UserUpdateProfileReducer,
-        userUpdateReducer
-} from "./UserUpdateProfileReducer";
+        UserRegisterReducer,
+        UserLoginReducer,
+        userListReducer,
+        userUpdateReducer,
+        userDeleteReducer
+} from "./UserReducers";
+
 import {
         OrderCreateReducer,
         OrderDetailsReducer,
         OrderPayReducer,
         OrderListMyReducer,
-        OrderListReducer, OrderDeliverReducer
-} from "./OrderReducer";
+        OrderListReducer,
+        OrderDeliverReducer
+} from "./OrderReducers";
 
 export const rootReducers = combineReducers({
         productsList: ProductListReducers,
-        productDetails: ProductDetailsReducer,
-        cart: CartReducer,
+        productDetails: ProductReducers,
+        cart: CartReducers,
         userLogin: UserLoginReducer,
         userRegister: UserRegisterReducer,
-        userDetails: UserDetailsReducer,
+        userDetails: UserReducers,
         userUpdateProfile: UserUpdateProfileReducer,
         orderCreate: OrderCreateReducer,
         orderDetails: OrderDetailsReducer,

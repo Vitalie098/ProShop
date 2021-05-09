@@ -4,8 +4,7 @@ import Message from "../components/Message";
 import Loading from "../components/loading/loading";
 import {Button, Col, Form, FormGroup, Row, Table} from "react-bootstrap";
 import {LinkContainer} from "react-router-bootstrap"
-import {getUserDetails} from "../store/actions/userDetails"
-import {updateUserProfile} from "../store/actions/userUpdate"
+import {getUserDetails, updateUserProfile} from "../store/actions/users"
 import {getOrderList} from "../store/actions/orders";
 
 const ProfileScreen = ({history}) => {

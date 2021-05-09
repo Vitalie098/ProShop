@@ -2,7 +2,7 @@ import React from "react"
 import {Nav, Navbar, Container, NavDropdown} from "react-bootstrap"
 import {LinkContainer} from "react-router-bootstrap"
 import {useDispatch, useSelector} from "react-redux";
-import {logout} from "../store/actions/userAuth"
+import {logout} from "../store/actions/users"
 import {Route} from "react-router-dom";
 import SearchBox from "./SearchBox";
 

@@ -5,7 +5,7 @@ import Message from "../components/Message";
 import Loading from "../components/loading/loading";
 import {Button, Col, Form, FormGroup, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import {register} from "../store/actions/userAuth"
+import {register} from "../store/actions/users"
 
 const RegisterScreen = ({history, location}) => {
     const [name, setName] = useState("")

@@ -3,14 +3,15 @@ import {
     CART_SAVE_PAYMENT_METHOD,
     CART_SAVE_SHIPPING_ADDRESS,
     REMOVE_CART_ITEM
-} from "../actions/typesActions";
+} from "../actions/types/CartTypes";
+
 
 const initialState = {
     cartItems: [],
     shippingAddress: {}
 }
 
-export const CartReducer = (state = initialState, action) => {
+export const CartReducers = (state = initialState, action) => {
     switch (action.type) {
         case ADD_CART_ITEM:
             const item = action.payload

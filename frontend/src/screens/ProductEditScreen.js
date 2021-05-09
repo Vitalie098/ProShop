@@ -5,9 +5,9 @@ import Message from "../components/Message";
 import Loading from "../components/loading/loading";
 import {Button, Form, FormGroup} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import {PRODUCT_UPDATE_RESET} from "../store/actions/typesActions";
-import {listProductDetails} from "../store/actions/productDetails";
-import {updateProduct} from "../store/actions/productsList";
+import {PRODUCT_UPDATE_RESET} from "../store/actions/types/productsTypes";
+import {listProductDetails} from "../store/actions/products";
+import {updateProduct} from "../store/actions/products";
 import axios from "axios";
 
 const UserEditScreen = ({history, match}) => {

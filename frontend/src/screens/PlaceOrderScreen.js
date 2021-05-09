@@ -5,7 +5,8 @@ import {useDispatch, useSelector} from "react-redux";
 import Message from "../components/Message";
 import {Link} from "react-router-dom";
 import {createOrder} from "../store/actions/orders";
-import {ORDER_CREATE_RESET, USER_DETAILS_RESET} from "../store/actions/typesActions";
+import {ORDER_CREATE_RESET} from "../store/actions/types/ordersTypes";
+import {USER_DETAILS_RESET} from "../store/actions/types/userTypes";
 
 const PlaceOrderScreen = ({history}) => {
     const cart = useSelector(state => state.cart)
