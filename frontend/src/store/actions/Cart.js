@@ -2,7 +2,10 @@ import axios from "axios";
 import {ADD_CART_ITEM, CART_SAVE_PAYMENT_METHOD, CART_SAVE_SHIPPING_ADDRESS, REMOVE_CART_ITEM} from "./types/CartTypes";
 
 export const addToCart = (id, qty) => async (dispatch, getState) => {
+    console.log("dsadas    " + id)
     const {data} = await axios.get(`/api/product/${id}`)
+
+    console.log(" 1 " + data)
 
     dispatch({
         type: ADD_CART_ITEM,

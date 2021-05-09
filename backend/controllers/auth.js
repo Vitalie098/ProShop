@@ -19,35 +19,30 @@ module.exports.login = async function (req, res) {
 }
 
 module.exports.register = async function(req, res) {
-    try {
-        const {name, email, password} = req.body
-        const candidate = await User.findOne({email})
 
-        if(candidate) {
-            res.status(400)
-            throw new Error("Asa utilizator deja exista")
-        }
-            const user = await User.create({
-                name,
-                email,
-                password
-            })
+    const {name, email, password} = req.body
+    const candidate = await User.findOne({email})
 
-            if(user) {
-                res.status(201).json({
-                    id: user._id,
-                    name: user.name,
-                    email: user.email,
-                    isAdmin: user.isAdmin,
-                    token: generateToken(user._id),
-                })
-            } else {
-                res.status(400).json({message: "Invalid user data" })
+    if(candidate) {
+        res.status(400).json({message: "User already exists"})
+    }
 
-            }
+    const user = await User.create({
+        name,
+        email,
+        password
+    })
 
-    } catch (e) {
-        console.log(e)
+    if(user) {
+        res.status(201).json({
+            id: user._id,
+            name: user.name,
+            email: user.email,
+            isAdmin: user.isAdmin,
+            token: generateToken(user._id),
+        })
+    } else {
+        res.status(400).json({message: "Invalid user data" })
     }
 }
 
@@ -64,7 +59,7 @@ module.exports.getUserProfile = async function (req, res) {
             token: generateToken(user._id)
         })
     } else {
-        res.status(404).json({message: "Utilizatorul nu a fost gasit" })
+        res.status(404).json({message: "User not found" })
     }
 }
 
@@ -104,9 +99,9 @@ module.exports.removeUser = async (req, res) => {
 
     if(user) {
         await User.remove(user)
-        res.json({message: "Utilizatorul a fost sters"})
+        res.json({message: "User removed"})
     }else {
-        res.status(404).json({message: "Utilizatorul  nu a fost gasit"})
+        res.status(404).json({message: "User not found"})
     }
 }
 
