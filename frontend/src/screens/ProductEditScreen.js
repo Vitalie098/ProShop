@@ -10,7 +10,7 @@ import {listProductDetails} from "../store/actions/products";
 import {updateProduct} from "../store/actions/products";
 import axios from "axios";
 
-const UserEditScreen = ({history, match}) => {
+const ProductEditScreen = ({history, match}) => {
     const productId = match.params.id
 
     const [name, setName] = useState('')
@@ -199,4 +199,4 @@ const UserEditScreen = ({history, match}) => {
     )
 }
 
-export default UserEditScreen
+export default ProductEditScreen
